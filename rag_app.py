@@ -9,6 +9,10 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain.memory import ConversationBufferMemory
 import streamlit as st
+import os
+
+if not os.path.exists("mistral-7b-instruct-v0.1.Q4_K_M.gguf"):
+    os.system("huggingface-cli download TheBloke/Mistral-7B-Instruct-v0.1-GGUF mistral-7b-instruct-v0.1.Q4_K_M.gguf --local-dir . --local-dir-use-symlinks False")
 
 # llm
 @st.cache_resource
