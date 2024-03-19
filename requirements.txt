@@ -1,3 +1,5 @@
 langchain==0.1.12
 langchain_community==0.0.28
 streamlit==1.32.2
+huggingface-cli
+llama-cpp-python
